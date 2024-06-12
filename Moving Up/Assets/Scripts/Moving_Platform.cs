@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Moving_Platform : MonoBehaviour
 {
-    public float speed;
-    public int startingPoint;
+    public float speed; //Inspectorissa saa m‰‰ritell‰ nopeuden.
+    public int startingPoint; 
     public Transform[] points; //Laitetaan inspectoriin pisteet, joiden v‰lill‰ platform kulkee.
 
     private int i;
@@ -34,7 +34,7 @@ public class Moving_Platform : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         movingPlatform();
     }
