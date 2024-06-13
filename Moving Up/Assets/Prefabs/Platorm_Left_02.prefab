@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6164064471411431780}
   - component: {fileID: 9177473589976241661}
   - component: {fileID: 2470164969495191925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platorm_Left_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
