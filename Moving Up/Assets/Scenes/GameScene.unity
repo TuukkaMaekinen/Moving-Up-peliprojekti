@@ -3872,7 +3872,7 @@ GameObject:
   - component: {fileID: 1016398406}
   - component: {fileID: 1016398407}
   - component: {fileID: 1016398408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MovingUp_lake_asset_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5705,6 +5705,7 @@ MonoBehaviour:
   minPower: {x: -8, y: -8}
   maxPower: {x: 12, y: 12}
   animator: {fileID: 1657304547}
+  isGrounded: 0
   groundCheck: {fileID: 2038904909}
   groundCheckLayer:
     serializedVersion: 2

@@ -19,7 +19,8 @@ public class BirdyControl : MonoBehaviour
     Vector3 endPoint;
 
     bool isStill = true;
-    bool isGrounded;
+    public bool isGrounded;
+    bool canJump;
 
     public Transform groundCheck;
     public LayerMask groundCheckLayer;
@@ -27,6 +28,17 @@ public class BirdyControl : MonoBehaviour
     void GroundChecker()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundCheckLayer);
+
+        if (isGrounded )
+        {
+            canJump = false;
+        }
+
+        else
+        {
+            canJump = true;
+        }
+
     }
 
         
@@ -40,6 +52,7 @@ public class BirdyControl : MonoBehaviour
     private void Update()
     {
         GroundChecker();
+        animator.SetBool("jump", canJump);
 
         if (rb.velocity == new Vector2(0, 0))
         {
@@ -72,7 +85,7 @@ public class BirdyControl : MonoBehaviour
             rb.AddForce(force * power, ForceMode2D.Impulse);
 
             tl.EndLine();
-            animator.SetBool("jump", true);
+            
 
         }
     }
