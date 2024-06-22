@@ -28,7 +28,7 @@ public class BirdyControl : MonoBehaviour
     void GroundChecker()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundCheckLayer);
-
+        print("osuuosuu");
         if (isGrounded )
         {
             canJump = false;

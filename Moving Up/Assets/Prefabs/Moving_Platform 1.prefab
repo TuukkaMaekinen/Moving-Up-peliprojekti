@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 4921833016696774876}
   m_Layer: 0
   m_Name: Moving_Platform
-  m_TagString: Untagged
+  m_TagString: Moving platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,8 +236,8 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &8503776347266484418
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 5250992585630938636}
   m_Layer: 6
   m_Name: Moving_Platform 1
-  m_TagString: Untagged
+  m_TagString: Moving platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

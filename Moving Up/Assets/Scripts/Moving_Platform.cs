@@ -18,7 +18,7 @@ public class Moving_Platform : MonoBehaviour
         }
     }
 
-    public void movingPlatform() //Funktio, jolla saadaan platform liikkeeseen.
+    public void FixedUpdate() //Funktio, jolla saadaan platform liikkeeseen.
     {
         if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
         {
@@ -34,8 +34,26 @@ public class Moving_Platform : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
 
-    void FixedUpdate()
-    {
-        movingPlatform();
-    }
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    print("jes");
+
+    //    if (other.tag == "Player")
+    //    {
+    //        other.transform.SetParent(transform);
+    //        Debug.Log("Moving platform");
+    //    }
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
+    //        print("NYT!");
+    //        other.transform.SetParent(null);
+    //    }
+    //}
+
+
 }
