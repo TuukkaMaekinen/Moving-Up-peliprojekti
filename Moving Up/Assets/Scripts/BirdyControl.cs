@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BirdyControl : MonoBehaviour
@@ -28,7 +29,7 @@ public class BirdyControl : MonoBehaviour
     void GroundChecker()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundCheckLayer);
-        print("osuuosuu");
+        
         if (isGrounded )
         {
             canJump = false;
@@ -88,5 +89,17 @@ public class BirdyControl : MonoBehaviour
             
 
         }
+
+     
+
+        //if (rb.velocity.x < 0)
+        //{
+        //    // Hyväksyy myös new Vector2(x,y)
+        //    transform.localScale = new(-1, transform.localScale.y);
+        //}
+        //else if (rb.velocity.x > 0)
+        //{
+        //    transform.localScale = new(1, transform.localScale.y);
+        //}
     }
 }
