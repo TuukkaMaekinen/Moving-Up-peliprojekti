@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause_Menu : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Pause_Menu : MonoBehaviour
 
 
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
@@ -23,19 +24,10 @@ public class Pause_Menu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MainMenu()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
+        SceneManager.LoadScene(0);
     }
+
+
 }

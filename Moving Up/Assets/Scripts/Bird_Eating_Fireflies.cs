@@ -12,6 +12,8 @@ public class Bird_Eating_Fireflies : MonoBehaviour
         {
             print("Tulikarpanen");
             Destroy(other.gameObject);
+            Firefly_Counter.fireflyAmount = +1;
+
         }
     }
     

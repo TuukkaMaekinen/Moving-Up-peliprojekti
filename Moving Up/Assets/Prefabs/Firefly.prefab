@@ -94,7 +94,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.003912747, y: 0}
@@ -109,7 +109,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8927353648144053070}
-  - component: {fileID: 3059480738024317829}
   m_Layer: 0
   m_Name: Firefly
   m_TagString: Firefly
@@ -134,33 +133,6 @@ Transform:
   - {fileID: 5806886445409087581}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &3059480738024317829
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782169432904026495}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!1001 &544771090887087789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,6 +195,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1244077043849820903, guid: b3474fdefcfb34e9d8e0f2cf3860eaa7, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1261024071430439539}
+    - targetCorrespondingSourceObject: {fileID: 1244077043849820903, guid: b3474fdefcfb34e9d8e0f2cf3860eaa7, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2292680514972382821}
   m_SourcePrefab: {fileID: 100100000, guid: b3474fdefcfb34e9d8e0f2cf3860eaa7, type: 3}
 --- !u!1 &1642884851354365002 stripped
@@ -230,6 +205,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1244077043849820903, guid: b3474fdefcfb34e9d8e0f2cf3860eaa7, type: 3}
   m_PrefabInstance: {fileID: 544771090887087789}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1261024071430439539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642884851354365002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dde07517529f7a9479edd6eda4a7f45f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!58 &2292680514972382821
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -262,9 +249,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.012556374, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2325
+  m_Radius: 0.13092893
 --- !u!4 &5262934606625763467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5658448886242731558, guid: b3474fdefcfb34e9d8e0f2cf3860eaa7, type: 3}
@@ -281,6 +268,10 @@ PrefabInstance:
     - target: {fileID: 1603743034898145027, guid: 1284dcce9190a4699bb2ecf922b1f435, type: 3}
       propertyPath: m_Name
       value: Firefly_light_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603743034898145027, guid: 1284dcce9190a4699bb2ecf922b1f435, type: 3}
+      propertyPath: m_TagString
+      value: Firefly
       objectReference: {fileID: 0}
     - target: {fileID: 8022021209281751022, guid: 1284dcce9190a4699bb2ecf922b1f435, type: 3}
       propertyPath: m_LocalPosition.x
