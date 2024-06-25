@@ -6,6 +6,7 @@ public class Firefly : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Firefly_Counter.fireflyAmount++;
+        if (collision.gameObject.CompareTag("Firefly"))
+            Firefly_Counter.fireflyAmount++;
     }
 }
