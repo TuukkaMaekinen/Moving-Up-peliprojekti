@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1603743034898145027, guid: 1284dcce9190a4699bb2ecf922b1f435, type: 3}
       propertyPath: m_TagString
-      value: FireflyLight
+      value: Firefly
       objectReference: {fileID: 0}
     - target: {fileID: 8022021209281751022, guid: 1284dcce9190a4699bb2ecf922b1f435, type: 3}
       propertyPath: m_LocalPosition.x
