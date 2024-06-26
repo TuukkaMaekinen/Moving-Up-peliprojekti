@@ -4655,7 +4655,7 @@ Transform:
   m_GameObject: {fileID: 388087820}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.10000024, y: 0.16000009, z: -10}
+  m_LocalPosition: {x: -0.120000236, y: 0.15999961, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5671,7 +5671,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.10000024, y: 0.16000009, z: -10}
+  m_LocalPosition: {x: -0.120000236, y: 0.15999961, z: -10}
   m_LocalScale: {x: 0.14213778, y: 0.9475852, z: 0.9475852}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7306,7 +7306,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 0
   m_ScreenX: 0.5
-  m_ScreenY: 0.75
+  m_ScreenY: 0.78
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.7234375
   m_DeadZoneHeight: 0
@@ -11254,7 +11254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1214143686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12927,8 +12927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -227, y: -447}
-  m_SizeDelta: {x: 691, y: 384}
+  m_AnchoredPosition: {x: -200, y: -447}
+  m_SizeDelta: {x: 392, y: 134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400937637
 MonoBehaviour:
@@ -13018,7 +13018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 19a28d6b8c82d6e449fe51fa0a771298, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e7b910d4bb5a9f4b92431a33b43688c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13937,7 +13937,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 471}
-  m_SizeDelta: {x: 1021, y: 395}
+  m_SizeDelta: {x: 511, y: 198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504178582
 MonoBehaviour:
@@ -13959,7 +13959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d6adfd0542c50a64fa6dae38183ecb23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdbf33687e5264d41a2ee96af86f2e16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15811,8 +15811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386, y: -447}
-  m_SizeDelta: {x: 319, y: 384}
+  m_AnchoredPosition: {x: 300, y: -447}
+  m_SizeDelta: {x: 364, y: 267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742443528
 MonoBehaviour:
@@ -15890,7 +15890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87f71dedb83954944a73e2b210c8bb80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f3dabd761d4d7c4e9998a01225a42c0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19889,6 +19889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird_cry_iddle_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6210887118579615725, guid: 73228a18ec43a463f8c92359d9b626cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8045371483088919752, guid: 73228a18ec43a463f8c92359d9b626cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.12
@@ -20472,6 +20476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird_sad_iddle_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3240785322811350079, guid: 0ed136ee891ae41119fca90bb9f60c57, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7995584973318592427, guid: 0ed136ee891ae41119fca90bb9f60c57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.379
@@ -20528,6 +20536,10 @@ PrefabInstance:
     - target: {fileID: 1068912087014691045, guid: 6465a1a75f7504e40be98b5dd383007f, type: 3}
       propertyPath: m_Name
       value: Bird_falling_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068912087014691045, guid: 6465a1a75f7504e40be98b5dd383007f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2499027885347629171, guid: 6465a1a75f7504e40be98b5dd383007f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21801,11 +21813,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852635445522559640, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 7852635445522559640, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 7852635445522559640, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21970,6 +21982,10 @@ PrefabInstance:
     - target: {fileID: 8209532476398923193, guid: 5fcdc9dd885d543958543f509a9b33aa, type: 3}
       propertyPath: m_Name
       value: Bird_eat_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209532476398923193, guid: 5fcdc9dd885d543958543f509a9b33aa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

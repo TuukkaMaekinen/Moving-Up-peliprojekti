@@ -29,33 +29,23 @@ public class BirdyControl : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundCheckLayer;
 
-    bool isEating;
+    //bool isEating
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        animator.SetBool("eat", isEating);
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    animator.SetBool("eat", isEating);
        
 
-        if (other.gameObject.CompareTag("Firefly"))
-        {
-            print("Tulikarpanen");
-            Destroy(other.gameObject);
-<<<<<<< Updated upstream
-            isEating = true;
-=======
-            isEating = false;
->>>>>>> Stashed changes
-        }
+    //    if (other.gameObject.CompareTag("Firefly"))
+    //    {
+    //        print("Tulikarpanen");
+    //        Destroy(other.gameObject);
+    //        isEating = true;
+    //        isEating = false;
+    //    }
 
-        else
-        {
-<<<<<<< Updated upstream
-            isEating = false;
-=======
-            isEating = true;
->>>>>>> Stashed changes
-        }
-    }
+
+    //}
 
     void GroundChecker()
     {
@@ -73,16 +63,16 @@ public class BirdyControl : MonoBehaviour
 
     }
 
-    private void OnGUI()
-    {
-        GUIStyle myStyle = new GUIStyle();
-        myStyle.fontSize = 60;
-        myStyle.normal.textColor = Color.yellow;
+    //private void OnGUI()
+    //{
+    //    GUIStyle myStyle = new GUIStyle();
+    //    myStyle.fontSize = 60;
+    //    myStyle.normal.textColor = Color.yellow;
 
-        GUI.Label(new Rect(100, 100, 100, 20), rb.velocity.y.ToString(), myStyle);
-        GUI.Label(new Rect(100, 200, 100, 20), isFalling.ToString(), myStyle);
+    //    GUI.Label(new Rect(100, 100, 100, 20), rb.velocity.y.ToString(), myStyle);
+    //    GUI.Label(new Rect(100, 200, 100, 20), isFalling.ToString(), myStyle);
 
-    }
+    //}
 
     private void Start()
     {
