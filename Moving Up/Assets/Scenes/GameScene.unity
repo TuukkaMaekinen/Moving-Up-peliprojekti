@@ -15279,20 +15279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c990c038d513814f87b1730aea39cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1657304554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618088728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d49e07c880988041bc2e96f19538c5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  direction: 0
 --- !u!114 &1657304555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21789,6 +21775,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5491439322375450818, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7304863223031354849, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
       propertyPath: m_Name
       value: Bird
@@ -21868,9 +21858,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7304863223031354849, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1657304553}
-    - targetCorrespondingSourceObject: {fileID: 7304863223031354849, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1657304554}
     - targetCorrespondingSourceObject: {fileID: 7304863223031354849, guid: a1ea088e59bf946d69268242b7c0af88, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1657304555}

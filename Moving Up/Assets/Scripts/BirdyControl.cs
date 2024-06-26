@@ -40,12 +40,20 @@ public class BirdyControl : MonoBehaviour
         {
             print("Tulikarpanen");
             Destroy(other.gameObject);
+<<<<<<< Updated upstream
             isEating = true;
+=======
+            isEating = false;
+>>>>>>> Stashed changes
         }
 
         else
         {
+<<<<<<< Updated upstream
             isEating = false;
+=======
+            isEating = true;
+>>>>>>> Stashed changes
         }
     }
 
