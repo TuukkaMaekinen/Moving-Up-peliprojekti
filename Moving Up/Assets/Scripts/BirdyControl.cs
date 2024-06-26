@@ -13,6 +13,7 @@ public class BirdyControl : MonoBehaviour
 
     TrajectoryLine tl;
     [SerializeField]  Animator animator;
+    public float fallvalue;
 
     Camera cam;
     Vector2 force;
@@ -22,15 +23,37 @@ public class BirdyControl : MonoBehaviour
     bool isStill = true;
     public bool isGrounded;
     bool canJump;
+    bool isFalling;
+    bool isCrying;
 
     public Transform groundCheck;
     public LayerMask groundCheckLayer;
+
+    bool isEating;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        animator.SetBool("eat", isEating);
+       
+
+        if (other.gameObject.CompareTag("Firefly"))
+        {
+            print("Tulikarpanen");
+            Destroy(other.gameObject);
+            isEating = true;
+        }
+
+        else
+        {
+            isEating = false;
+        }
+    }
 
     void GroundChecker()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundCheckLayer);
         
-        if (isGrounded )
+        if (isGrounded)
         {
             canJump = false;
         }
@@ -42,7 +65,16 @@ public class BirdyControl : MonoBehaviour
 
     }
 
-        
+    private void OnGUI()
+    {
+        GUIStyle myStyle = new GUIStyle();
+        myStyle.fontSize = 60;
+        myStyle.normal.textColor = Color.yellow;
+
+        GUI.Label(new Rect(100, 100, 100, 20), rb.velocity.y.ToString(), myStyle);
+        GUI.Label(new Rect(100, 200, 100, 20), isFalling.ToString(), myStyle);
+
+    }
 
     private void Start()
     {
@@ -58,11 +90,21 @@ public class BirdyControl : MonoBehaviour
         if (rb.velocity == new Vector2(0, 0))
         {
             isStill = true;
+            isFalling = false;
         }
         else
         {
             isStill = false;
         }
+        
+        animator.SetBool("fall", isFalling);
+
+        if (rb.velocity.y < -fallvalue)
+        {
+            isFalling = true;
+        }
+
+
 
         if (Input.GetMouseButtonDown(0) && isStill == true)
         {
@@ -84,22 +126,23 @@ public class BirdyControl : MonoBehaviour
 
             force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
             rb.AddForce(force * power, ForceMode2D.Impulse);
+            animator.SetBool("jump", true);
 
             tl.EndLine();
             
 
         }
 
-     
 
-        //if (rb.velocity.x < 0)
-        //{
-        //    // Hyväksyy myös new Vector2(x,y)
-        //    transform.localScale = new(-1, transform.localScale.y);
-        //}
-        //else if (rb.velocity.x > 0)
-        //{
-        //    transform.localScale = new(1, transform.localScale.y);
-        //}
+
+        if (rb.velocity.x > 0)
+        {
+            // Hyväksyy myös new Vector2(x,y)
+            transform.localScale = new(-1, transform.localScale.y);
+        }
+        else if (rb.velocity.x < 0)
+        {
+            transform.localScale = new(1, transform.localScale.y);
+        }
     }
 }
