@@ -45,16 +45,16 @@ public class BirdyControl : MonoBehaviour
 
     }
 
-    private void OnGUI()
-    {
-        GUIStyle myStyle = new GUIStyle();
-        myStyle.fontSize = 60;
-        myStyle.normal.textColor = Color.yellow;
+    //private void OnGUI()
+    //{
+    //    GUIStyle myStyle = new GUIStyle();
+    //    myStyle.fontSize = 60;
+    //    myStyle.normal.textColor = Color.yellow;
 
-        GUI.Label(new Rect(100, 100, 100, 20), rb.velocity.y.ToString(), myStyle);
-        GUI.Label(new Rect(100, 200, 100, 20), isFalling.ToString(), myStyle);
+    //    GUI.Label(new Rect(100, 100, 100, 20), rb.velocity.y.ToString(), myStyle);
+    //    GUI.Label(new Rect(100, 200, 100, 20), isFalling.ToString(), myStyle);
 
-    }
+    //}
 
     private void Start()
     {
@@ -71,6 +71,7 @@ public class BirdyControl : MonoBehaviour
         {
             isStill = true;
             isFalling = false;
+            isCrying = true;
         }
         else
         {
@@ -82,6 +83,13 @@ public class BirdyControl : MonoBehaviour
         if (rb.velocity.y < -fallvalue)
         {
             isFalling = true;
+        }
+
+        animator.SetBool("cry", isCrying);
+        
+        if (rb.velocity == new Vector2(0, 0))
+        {
+            isCrying = true;
         }
 
 
