@@ -29,23 +29,23 @@ public class BirdyControl : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundCheckLayer;
 
-    //bool isEating
+    bool isEating;
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    animator.SetBool("eat", isEating);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+       animator.SetBool("eat", isEating);
        
 
-    //    if (other.gameObject.CompareTag("Firefly"))
-    //    {
-    //        print("Tulikarpanen");
-    //        Destroy(other.gameObject);
-    //        isEating = true;
-    //        isEating = false;
-    //    }
+       if (other.gameObject.CompareTag("Firefly"))
+       {
+           print("Tulikarpanen");
+           Destroy(other.gameObject);
+           isEating = true;
+           isEating = false;
+       }
 
 
-    //}
+    }
 
     void GroundChecker()
     {
