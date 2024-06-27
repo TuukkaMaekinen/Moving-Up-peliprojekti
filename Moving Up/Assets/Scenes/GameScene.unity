@@ -4631,7 +4631,7 @@ MonoBehaviour:
     FieldOfView: 60
     OrthographicSize: 5
     NearClipPlane: 5
-    FarClipPlane: 1000
+    FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -5643,7 +5643,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 5
-  far clip plane: 1000
+  far clip plane: 5000
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -7308,11 +7308,11 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.78
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.7234375
+  m_DeadZoneWidth: 0.262
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 1
   m_UnlimitedSoftZone: 1
-  m_SoftZoneWidth: 0.92
+  m_SoftZoneWidth: 1.633
   m_SoftZoneHeight: 0.8
   m_BiasX: 0
   m_BiasY: 0

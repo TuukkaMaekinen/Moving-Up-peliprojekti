@@ -67,6 +67,11 @@ public class BirdyControl : MonoBehaviour
     //    GUIStyle myStyle = new GUIStyle();
     //    myStyle.fontSize = 60;
     //    myStyle.normal.textColor = Color.yellow;
+    //private void OnGUI()
+    //{
+    //    GUIStyle myStyle = new GUIStyle();
+    //    myStyle.fontSize = 60;
+    //    myStyle.normal.textColor = Color.yellow;
 
     //    GUI.Label(new Rect(100, 100, 100, 20), rb.velocity.y.ToString(), myStyle);
     //    GUI.Label(new Rect(100, 200, 100, 20), isFalling.ToString(), myStyle);
@@ -88,6 +93,7 @@ public class BirdyControl : MonoBehaviour
         {
             isStill = true;
             isFalling = false;
+            isCrying = true;
         }
         else
         {
