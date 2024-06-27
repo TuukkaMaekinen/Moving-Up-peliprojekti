@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 
 public class Moving_Platform : MonoBehaviour
 {
-    public float speed; //Inspectorissa saa määritellä nopeuden.
+    public float speed; //Inspectorissa saa maaritella nopeuden.
     public int startingPoint; 
-    public Transform[] points; //Laitetaan inspectoriin pisteet, joiden välillä platform kulkee.
+    public Transform[] points; //Laitetaan inspectoriin pisteet, joiden valilla platform kulkee.
 
     private int i;
 
     private void Start()
     {
         {
-            transform.position = points[startingPoint].position; //Tämä asettaa platformin lähtöpisteeseensä.
+            transform.position = points[startingPoint].position; //Tama asettaa platformin lahtapisteeseensa.
         }
     }
 

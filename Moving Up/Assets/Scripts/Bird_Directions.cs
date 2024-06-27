@@ -4,34 +4,75 @@ using UnityEngine;
 
 public class Bird_Directions : MonoBehaviour
 {
+    [SerializeField]
+    float moveX;
+    [SerializeField]
+    float moveY;
 
-    public float speed;
+    public bool isFacingLeft;
+    public float movespeed;
+    public Rigidbody2D rb;
+
+    SpriteRenderer spriteRenderer;
 
 
-    public float direction;
-    private Rigidbody2D player;
-   
+
 
     void Start()
     {
-        player = GetComponent<Rigidbody2D>();
-       
+        isFacingLeft = !isFacingLeft; // eli isFacingLeft on senhetkinen vasta-arvo
+                                      // 3 tapaa referoida alustettuun spriteRendereriin:
+                                      //  // Jos flippaus 1.vaihtoehto käytössä
+        rb.GetComponent<SpriteRenderer>();
+        spriteRenderer = rb.GetComponent<SpriteRenderer>();
+    }
+
+    void Move()
+    {
+
+        if (moveX < 0)
+        {
+            spriteRenderer.flipX = false;
+            isFacingLeft = true;
+        }
+        if (moveX > 0)
+        {
+            spriteRenderer.flipX = true;
+            isFacingLeft = false;
+        }
+
+        // Tai sitten vain:
+        //else
+        //{
+        //    spriteRenderer.flipX = true;
+        //}
+        //-----------------------------
+        // Hahmon flippaus vaihtoehto 2:
+        //if (rb.velocity.x < 0)
+        //{
+        //    // Hyväksyy myös new Vector2(x,y)
+        //    transform.localScale = new(-1, transform.localScale.y);
+        //}
+        //else if (rb.velocity.x > 0)
+        //{
+        //    transform.localScale = new(1, transform.localScale.y);
+        //}
+        //-----------------------------
+        // Hahmon flippaus vaihtoehto 3:
+        //if (rb.velocity.x < 0)
+        //{
+        //    transform.rotation = Quaternion.Euler(0, 180f, 0);
+        //}
+        //else if (rb.velocity.x > 0)
+        //{
+        //    transform.rotation = Quaternion.Euler(0, 0, 0);
+        //}
+
+
     }
 
     void Update()
     {
-        if (direction > 0f)
-        {
-            print("Jepjee");
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
-            transform.localScale = new Vector2(1, -1);
-        }
-        if (direction < 0f)
-        {
-            print("kakkakakaka");
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
-            transform.localScale = new Vector2(-1, 1);
-
-        }
+        Move();
     }
 }

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BirdyControl : MonoBehaviour
@@ -29,6 +28,24 @@ public class BirdyControl : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundCheckLayer;
 
+    //bool isEating
+
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    animator.SetBool("eat", isEating);
+       
+
+    //    if (other.gameObject.CompareTag("Firefly"))
+    //    {
+    //        print("Tulikarpanen");
+    //        Destroy(other.gameObject);
+    //        isEating = true;
+    //        isEating = false;
+    //    }
+
+
+    //}
+
     void GroundChecker()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundCheckLayer);
@@ -45,6 +62,11 @@ public class BirdyControl : MonoBehaviour
 
     }
 
+    //private void OnGUI()
+    //{
+    //    GUIStyle myStyle = new GUIStyle();
+    //    myStyle.fontSize = 60;
+    //    myStyle.normal.textColor = Color.yellow;
     //private void OnGUI()
     //{
     //    GUIStyle myStyle = new GUIStyle();
@@ -86,7 +108,7 @@ public class BirdyControl : MonoBehaviour
         }
 
         animator.SetBool("cry", isCrying);
-        
+
         if (rb.velocity == new Vector2(0, 0))
         {
             isCrying = true;
@@ -121,16 +143,15 @@ public class BirdyControl : MonoBehaviour
 
         }
 
-     
 
-        //if (rb.velocity.x < 0)
-        //{
-        //    // Hyväksyy myös new Vector2(x,y)
-        //    transform.localScale = new(-1, transform.localScale.y);
-        //}
-        //else if (rb.velocity.x > 0)
-        //{
-        //    transform.localScale = new(1, transform.localScale.y);
-        //}
+
+        if (rb.velocity.x > 0)
+        {
+            transform.localScale = new(-1, transform.localScale.y);
+        }
+        else if (rb.velocity.x < 0)
+        {
+            transform.localScale = new(1, transform.localScale.y);
+        }
     }
 }
