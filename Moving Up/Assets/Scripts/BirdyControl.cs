@@ -29,23 +29,7 @@ public class BirdyControl : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundCheckLayer;
 
-    bool isEating;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-       animator.SetBool("eat", isEating);
-       
-
-       if (other.gameObject.CompareTag("Firefly"))
-       {
-           print("Tulikarpanen");
-           Destroy(other.gameObject);
-           isEating = true;
-           isEating = false;
-       }
-
-
-    }
 
     void GroundChecker()
     {
@@ -54,11 +38,14 @@ public class BirdyControl : MonoBehaviour
         if (isGrounded)
         {
             canJump = false;
+
+            
         }
 
         else
         {
             canJump = true;
+            
         }
 
     }
@@ -90,6 +77,7 @@ public class BirdyControl : MonoBehaviour
         GroundChecker();
         animator.SetBool("jump", canJump);
 
+
         if (rb.velocity == new Vector2(0, 0))
         {
             isStill = true;
@@ -99,6 +87,7 @@ public class BirdyControl : MonoBehaviour
         else
         {
             isStill = false;
+            
         }
         
         animator.SetBool("fall", isFalling);
@@ -146,13 +135,24 @@ public class BirdyControl : MonoBehaviour
 
 
 
-        if (rb.velocity.x > 0)
+        //if (rb.velocity.x > 0)
+        //{
+        //    transform.localScale = new(-1, transform.localScale.y);
+        //}
+        //else if (rb.velocity.x < 0)
+        //{
+        //    transform.localScale = new(1, transform.localScale.y);
+        //}
+
+        float threshold = 0.1f;
+
+        if (rb.velocity.x > threshold)
         {
-            transform.localScale = new(-1, transform.localScale.y);
+            transform.localScale = new Vector2(-1, transform.localScale.y);
         }
-        else if (rb.velocity.x < 0)
+        else if (rb.velocity.x < -threshold)
         {
-            transform.localScale = new(1, transform.localScale.y);
+            transform.localScale = new Vector2(1, transform.localScale.y);
         }
     }
 }
