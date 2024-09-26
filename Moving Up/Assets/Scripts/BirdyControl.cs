@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BirdyControl : MonoBehaviour
@@ -16,6 +16,7 @@ public class BirdyControl : MonoBehaviour
     public float fallvalue;
 
     Camera cam;
+    Camera cam2;
     Vector2 force;
     Vector3 startPoint;
     Vector3 endPoint;
@@ -69,6 +70,8 @@ public class BirdyControl : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
+
+        Camera.main.aspect = 1280f / 1920f;
         tl = GetComponent<TrajectoryLine>();
     }
 
