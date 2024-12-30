@@ -18,4 +18,12 @@ public class UI_Controller : MonoBehaviour
     { 
         SceneController.LoadScene(0);
     }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
